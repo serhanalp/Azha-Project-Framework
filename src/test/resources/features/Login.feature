@@ -1,11 +1,18 @@
-
 @login
-Feature: Users should be able to login
+Feature: Crmly login feature
 
-  Background: User is already in the log in page
+  Background: User is already in the login page
     Given the user is on the login page
 
   @wip
-  Scenario: Verify login with different user types
+  Scenario: Verify login with given credentials
+    Given the user logged in with username as "helpdesk1@cybertekschool.com" and password as "UserUser"
+
+  Scenario Outline: Verify login with different user types
     Given the user logged in as "<userType>"
-    Given the user logged in with username as "User1" and password as "UserUser123"
+
+    Examples:
+      | userType        |
+      | helpdesk        |
+      | human resources |
+      | marketing       |

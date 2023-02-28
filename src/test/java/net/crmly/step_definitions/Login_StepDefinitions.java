@@ -20,9 +20,9 @@ public class Login_StepDefinitions {
         if(userType.equalsIgnoreCase("helpdesk")){
             username = ConfigurationReader.getProperty("helpDesk_username");
             password = ConfigurationReader.getProperty("helpDesk_password");
-        }else if(userType.equalsIgnoreCase("human resource")){
-            username = ConfigurationReader.getProperty("humanResource_username");
-            password = ConfigurationReader.getProperty("humanResource_password");
+        }else if(userType.equalsIgnoreCase("human resources")){
+            username = ConfigurationReader.getProperty("humanResources_username");
+            password = ConfigurationReader.getProperty("humanResources_password");
         }else if(userType.equalsIgnoreCase("marketing")){
             username = ConfigurationReader.getProperty("marketing_username");
             password = ConfigurationReader.getProperty("marketing_password");
