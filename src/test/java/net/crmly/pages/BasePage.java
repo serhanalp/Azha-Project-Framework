@@ -18,6 +18,9 @@ public abstract class BasePage {
     @FindBy(xpath = "//a[@class='menu-item-link']")
     public List<WebElement> menuOptions;    // left panel options as a List
 
+    @FindBy(className = "menu-favorites-more-text")
+    public WebElement moreTab; // "More..." button on left panel to be able to retrieve all options above
+
     @FindBy(className = "header-search-input")
     public WebElement searchBar;
 
