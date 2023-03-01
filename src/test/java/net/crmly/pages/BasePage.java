@@ -37,7 +37,7 @@ public abstract class BasePage {
     public void clickOnOption(List<WebElement> options, String optionName){
 
         for (WebElement each : options) {
-            if (each.getText().equals(optionName.trim().toLowerCase())){
+            if (each.getText().equalsIgnoreCase(optionName.trim())){
                 each.click();
             }
         }
