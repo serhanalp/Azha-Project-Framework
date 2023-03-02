@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import net.crmly.pages.LoginPage;
 import net.crmly.utilities.ConfigurationReader;
 
-public class Login_StepDefinitions {
+public class US74_Login_StepDefinitions {
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
