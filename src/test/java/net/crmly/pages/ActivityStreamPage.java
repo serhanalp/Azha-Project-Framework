@@ -37,7 +37,7 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "//span[.='The message title is not specified']")
     public WebElement messageError;
 
-    @FindBy(xpath = "//div[@class=' feed-post-contentview feed-post-text-block-inner']/div")
+    @FindBy(xpath = "(//div[@class=' feed-post-contentview feed-post-text-block-inner']/div)[1]")
     public WebElement topMessage;
 
     public void clickTopMidTabOptions(List<WebElement> elements, String element){
@@ -51,10 +51,10 @@ public class ActivityStreamPage extends BasePage{
     public WebElement getElement() {  // this method prevents StaleElementReferenceException by relocating the same element
         try {
             return new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10))
-                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class=' feed-post-contentview feed-post-text-block-inner']/div")));
+                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class=' feed-post-contentview feed-post-text-block-inner']/div)[1]")));
         } catch (org.openqa.selenium.StaleElementReferenceException ex) {
             return new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10))
-                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class=' feed-post-contentview feed-post-text-block-inner']/div")));
+                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class=' feed-post-contentview feed-post-text-block-inner']/div)[1]")));
         }
     }
 
