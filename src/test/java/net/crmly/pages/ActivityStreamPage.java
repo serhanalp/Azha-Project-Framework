@@ -1,9 +1,14 @@
 package net.crmly.pages;
 
 import net.crmly.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.List;
 
 public class ActivityStreamPage extends BasePage{
@@ -32,7 +37,7 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "//span[.='The message title is not specified']")
     public WebElement messageError;
 
-    @FindBy(xpath = "//div[contains(text(), 'test-message-function')]")
+    @FindBy(xpath = "//div[@class=' feed-post-contentview feed-post-text-block-inner']/div")
     public WebElement topMessage;
 
     public void clickTopMidTabOptions(List<WebElement> elements, String element){
@@ -43,6 +48,15 @@ public class ActivityStreamPage extends BasePage{
                 break;
             } } }
 
+    public WebElement getElement() {  // this method prevents StaleElementReferenceException by relocating the same element
+        try {
+            return new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10))
+                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class=' feed-post-contentview feed-post-text-block-inner']/div")));
+        } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+            return new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10))
+                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class=' feed-post-contentview feed-post-text-block-inner']/div")));
+        }
+    }
 
 
 

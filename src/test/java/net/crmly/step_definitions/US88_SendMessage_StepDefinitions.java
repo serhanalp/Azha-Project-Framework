@@ -13,6 +13,7 @@ public class US88_SendMessage_StepDefinitions {
 
     ActivityStreamPage activityStreamPage = new ActivityStreamPage();
     Faker faker = new Faker();
+    String message = faker.harryPotter().quote();
 
     @When("user clicks on the Message tab")
     public void user_clicks_on_the_message_tab() {
@@ -27,7 +28,7 @@ public class US88_SendMessage_StepDefinitions {
         Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")));
 
         Actions actions = new Actions(Driver.getDriver());
-        actions.sendKeys("test-message-function").perform();
+        actions.sendKeys(message).perform();
 
         Driver.getDriver().switchTo().defaultContent();
 
@@ -36,7 +37,8 @@ public class US88_SendMessage_StepDefinitions {
     public void user_is_able_to_send_a_message_successfully_clicking_the_send_button() {
 
         activityStreamPage.sendMessageButton.click();
-        Assert.assertTrue(activityStreamPage.topMessage.isDisplayed());
+        activityStreamPage.getElement();
+        Assert.assertEquals(message, activityStreamPage.topMessage.getText().trim());
     }
 
     @When("user clicks on the Send button without writing a message")
@@ -49,8 +51,5 @@ public class US88_SendMessage_StepDefinitions {
         String actualMessage =activityStreamPage.messageError.getText();
         Assert.assertEquals(expectedMessage,actualMessage);
     }
-
-
-
 
 }

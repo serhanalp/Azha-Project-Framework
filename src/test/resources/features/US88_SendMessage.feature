@@ -1,4 +1,4 @@
-@regression @messageFunction
+@regression
 
   Feature: Verify sending simple text messages using the message tab
     User Story: As a user, I should be able to send simple text messages using the message tab.
@@ -9,7 +9,7 @@
   #And the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
   #And the user logged in with username as "marketing1@cybertekschool.com" and password as "UserUser"
 
-
+    @messageFunction
     Scenario: Verify user is be able to write on the message body and send a message after clicking the Message tab.
       When user clicks on the Message tab
       And user is able to write a text message on the message body
