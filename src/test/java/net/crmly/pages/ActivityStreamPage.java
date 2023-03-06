@@ -32,7 +32,7 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "//span[.='The message title is not specified']")
     public WebElement messageError;
 
-    @FindBy(xpath = "//div[@class='feed-post-text-block-inner-inner'][1]")
+    @FindBy(xpath = "//div[contains(text(), 'test-message-function')]")
     public WebElement topMessage;
 
     public void clickTopMidTabOptions(List<WebElement> elements, String element){

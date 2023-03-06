@@ -4,38 +4,33 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.crmly.pages.ActivityStreamPage;
+import net.crmly.utilities.BrowserUtils;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-
-
-import java.time.Duration;
-
 public class US88_SendMessage_StepDefinitions {
 
     ActivityStreamPage activityStreamPage = new ActivityStreamPage();
+    Faker faker = new Faker();
 
     @When("user clicks on the Message tab")
     public void user_clicks_on_the_message_tab() {
 
-        Driver.getDriver().navigate().refresh();
         activityStreamPage.messageTab.click();
+        BrowserUtils.waitFor(2);
 
     }
     @When("user is able to write a text message on the message body")
     public void user_is_able_to_write_a_text_message_on_the_message_body() {
 
-        //activityStreamPage.messageBox.click();
+        Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")));
 
         Actions actions = new Actions(Driver.getDriver());
-        Faker faker = new Faker();
+        actions.sendKeys("test-message-function").perform();
 
-        actions.sendKeys(faker.harryPotter().quote());
+        Driver.getDriver().switchTo().defaultContent();
+
     }
     @Then("user is able to send a message successfully clicking the Send button")
     public void user_is_able_to_send_a_message_successfully_clicking_the_send_button() {
