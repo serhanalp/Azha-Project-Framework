@@ -47,7 +47,12 @@ public abstract class BasePage {
         }
     }
 
+@FindBy(id = "left-menu-settings")
+    public WebElement configureMenu;
 
+
+    @FindBy(xpath = "//span[starts-with(@class,'menu-popup-item menu')]")
+    public List<WebElement> configureMenuOptions;
 
 
 }
