@@ -1,10 +1,10 @@
-@login
+@regression @smoke
 Feature: Crmly login feature
 
   Background: User is already in the login page
     Given the user is on the login page
 
-  @wip
+  @login
   Scenario: Verify login with given credentials
     Given the user logged in with username as "helpdesk1@cybertekschool.com" and password as "UserUser"
 
