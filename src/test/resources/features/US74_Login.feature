@@ -8,7 +8,7 @@ Feature: Crmly login feature
   Scenario: Verify login with given credentials
     Given the user logged in with username as "helpdesk1@cybertekschool.com" and password as "UserUser"
 
-
+  @B28G9-102 @negativeLogin
   Scenario: Verify login error message with invalid credentials provided
     When the user enters "wrong username" or "wrong password"
     Then the user should see "Incorrect username or password" message
