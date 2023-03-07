@@ -27,4 +27,7 @@ public class LoginPage {
         submitButton.click();
     }
 
+    @FindBy(className = "errortext")
+    public WebElement errorMessage;
+
 }
