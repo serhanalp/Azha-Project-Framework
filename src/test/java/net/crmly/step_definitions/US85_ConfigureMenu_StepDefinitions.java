@@ -18,11 +18,9 @@ public class US85_ConfigureMenu_StepDefinitions extends BasePage{
     public void user_clicks_on_configure_menu_button() {
         configureMenu.click();
     }
-    @When("user sees {int} options displayed")
-    public void user_sees_options_displayed(Integer int1) {
+    @When("user sees options displayed below")
+    public void user_sees_options_displayed_below(List<String> expectedOptions) {
         List<String> actualOptions = new ArrayList<>();
-        List<String> expectedOptions = new ArrayList<>(Arrays.asList("Configure menu items", "Collapse menu",
-                "Remove current page from left menu","Add custom menu item","Change primary tool","Reset menu"));
         for (WebElement eachOption : configureMenuOptions) {
            actualOptions.add(eachOption.getText());
         }
