@@ -42,7 +42,6 @@ public abstract class BasePage {
         for (WebElement each : options) {
             if (each.getText().equalsIgnoreCase(optionName.trim())){
                 each.click();
-                break;
             }
         }
     }
