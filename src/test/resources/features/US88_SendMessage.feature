@@ -5,8 +5,8 @@
 
     Background: User is already logged in to Crmly
       Given the user is on the login page
-      And the user logged in with username as "helpdesk2@cybertekschool.com" and password as "UserUser"
-  #And the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
+      #And the user logged in with username as "helpdesk2@cybertekschool.com" and password as "UserUser"
+  And the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
   #And the user logged in with username as "marketing1@cybertekschool.com" and password as "UserUser"
 
 
