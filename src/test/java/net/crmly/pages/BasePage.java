@@ -34,7 +34,7 @@ public abstract class BasePage {
     @FindBy (xpath = "//span[@id='feed-add-post-form-link-text']")
     public WebElement MORE_dropdownTop;
 
-    @FindBy (xpath = "//div[@class='menu-popup-items']")
+    @FindBy (xpath = "//span[starts-with(@class,\"menu-popup-item menu\")]")
     public List <WebElement> MORE_Dropdown_Options;
 
 
