@@ -4,7 +4,7 @@ Feature: Crmly login feature
   Background: User is already in the login page
     Given the user is on the login page
 
-  @wip
+
   Scenario: Verify login with given credentials
     Given the user logged in with username as "helpdesk1@cybertekschool.com" and password as "UserUser"
 
