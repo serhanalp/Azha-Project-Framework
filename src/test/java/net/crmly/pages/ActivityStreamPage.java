@@ -59,7 +59,11 @@ public class ActivityStreamPage extends BasePage{
     }
 
 
+    @FindBy(xpath = "(//*[contains(@class, 'b24-app-block-content-apps')])[4]")
+    public WebElement appStore;
 
+    @FindBy(xpath = "(//*[contains(@class, 'b24-app-block-content-apps')])[5]")
+    public WebElement googlePlay;
 
 
 }

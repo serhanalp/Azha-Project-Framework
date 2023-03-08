@@ -3,6 +3,7 @@ package net.crmly.step_definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.crmly.pages.BasePage;
+import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
@@ -10,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class US78_ProfileDropDown_StepDefinitions extends BasePage{
-
 
     @When("user click the profile module on the right side of page")
     public void user_click_the_profile_module_on_the_right_side_of_page() {
@@ -26,7 +26,6 @@ public class US78_ProfileDropDown_StepDefinitions extends BasePage{
             actualModulesStr.add(each.getText());
         }
         Assert.assertEquals(expectedModules,actualModulesStr);
-
 
     }
 }
