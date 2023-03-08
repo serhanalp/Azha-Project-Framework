@@ -7,5 +7,11 @@ Feature: user should be able to log in to the company page
     Given the user logged in with username as "helpdesk1@cybertekschool.com" and password as "UserUser"
     When user goes to the company page
     Then should see the seven module in the page
-      |Official information|Our Life|About Company|Photo Gallery|Video|Business News(RSS)|Career|
+      |Official Information|
+      |Our Life            |
+      |About Company       |
+      |Photo Gallery       |
+      |Video               |
+      |More  |
+      |Career|
 

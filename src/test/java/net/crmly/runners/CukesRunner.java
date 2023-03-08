@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"},
         glue = {"net/crmly/step_definitions"},
         dryRun = false,
-        tags = "@wip",
+        tags = "@B28G9-86",
         publish = true
 )
 

@@ -42,7 +42,8 @@ public class CompanyPage
     @FindBy(xpath = "//span[contains(text(),'Business News (RSS)')]")
     public WebElement businessNews;
 
-    @FindBy(xpath = "//div[@class='main-buttons-item']")
+   // @FindBy(xpath = "//div[@class='main-buttons-item']")
+    @FindBy(xpath = "//div[@id='top_menu_id_about']//a")
     public List<WebElement> companyPageMenue;
 
 

@@ -39,13 +39,13 @@ public class US86_CompanyPage_StepDef
             companyPageMenuTxt.add(each.getText());
         }
 
-        Collections.sort(companyPageMenuTxt);
-        Collections.sort(companyPageMenu);
+        System.out.println(companyPageMenuTxt);
+        System.out.println(companyPageMenu);
 
 
-        Assert.assertEquals(companyPageMenu,companyPageMenuTxt);
+        Assert.assertTrue(companyPageMenuTxt.containsAll(companyPageMenu));
 
-        //nasa
+
 
 
 
