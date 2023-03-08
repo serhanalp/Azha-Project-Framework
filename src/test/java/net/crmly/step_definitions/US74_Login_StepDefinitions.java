@@ -1,10 +1,14 @@
 package net.crmly.step_definitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.crmly.pages.LoginPage;
 import net.crmly.utilities.ConfigurationReader;
+import org.junit.Assert;
 
-public class Login_StepDefinitions {
+public class US74_Login_StepDefinitions {
+    LoginPage loginPage=new LoginPage();
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
@@ -33,7 +37,18 @@ public class Login_StepDefinitions {
 
     @Given("the user logged in with username as {string} and password as {string}")
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
-        LoginPage loginPage=new LoginPage();
         loginPage.login(username,password);
+    }
+
+    @When("the user enters {string} or {string}")
+    public void theUserEntersOr(String username, String password) {
+        loginPage.login(username,password);
+    }
+
+    @Then("the user should see {string} message")
+    public void theUserShouldSeeMessage(String expectedErrorMessage) {
+        String actualErrorMessage = loginPage.errorMessage.getText();
+
+        Assert.assertEquals("Messages DO NOT match!", expectedErrorMessage, actualErrorMessage);
     }
 }

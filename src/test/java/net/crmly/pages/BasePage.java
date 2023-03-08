@@ -31,6 +31,13 @@ public abstract class BasePage {
     public List<WebElement> userProfileDropdownOptions;    // user profile dropdown options as a List
 
 
+    @FindBy (xpath = "//span[@id='feed-add-post-form-link-text']")
+    public WebElement MORE_dropdownTop;
+
+    @FindBy (xpath = "//span[starts-with(@class,\"menu-popup-item menu\")]")
+    public List <WebElement> MORE_Dropdown_Options;
+
+
 
     /** This method lets us click on a desired Base Page WebElement contained in a List
      *  (such as Left panel options or user settings dropdown options)
@@ -42,11 +49,17 @@ public abstract class BasePage {
         for (WebElement each : options) {
             if (each.getText().equalsIgnoreCase(optionName.trim())){
                 each.click();
+                break;
             }
         }
     }
 
+@FindBy(id = "left-menu-settings")
+    public WebElement configureMenu;
 
+
+    @FindBy(xpath = "//span[starts-with(@class,'menu-popup-item menu')]")
+    public List<WebElement> configureMenuOptions;
 
 
 }
