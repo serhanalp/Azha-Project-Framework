@@ -1,4 +1,4 @@
-@mahmut
+@B28G9-112
 Feature: My profile page to see 5 options
   Agile Story: As a user, I want to access my profile page.
 
