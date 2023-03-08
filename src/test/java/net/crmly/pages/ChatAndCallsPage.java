@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class ChatAndCallsPage {
+public class ChatAndCallsPage extends BasePage{
 
     public ChatAndCallsPage(){
         PageFactory.initElements(Driver.getDriver(),this);
