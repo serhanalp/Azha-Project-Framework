@@ -3,7 +3,6 @@ package net.crmly.step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.crmly.pages.ActivityStreamPage;
 import net.crmly.pages.BasePage;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
@@ -12,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US78_ProfileDropDown extends BasePage{
+public class US78_ProfileDropDown_StepDefinitions extends BasePage{
 
     @Given("user is on the CRM home page")
     public void user_is_on_the_crm_home_page() {

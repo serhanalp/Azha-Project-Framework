@@ -6,7 +6,7 @@ import net.crmly.pages.ActivityStreamPage;
 import net.crmly.utilities.BrowserUtils;
 import org.junit.Assert;
 
-public class US77_DesktopDownloadOptions {
+public class US77_DesktopDownload_StepDefinitions {
 
     ActivityStreamPage activityStreamPage = new ActivityStreamPage();
 
