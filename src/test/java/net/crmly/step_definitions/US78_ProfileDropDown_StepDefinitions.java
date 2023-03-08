@@ -1,18 +1,15 @@
 package net.crmly.step_definitions;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.crmly.pages.ActivityStreamPage;
 import net.crmly.pages.BasePage;
-import net.crmly.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class US78_ProfileDropDown extends BasePage{
+public class US78_ProfileDropDown_StepDefinitions extends BasePage{
 
 
     @When("user click the profile module on the right side of page")
