@@ -8,13 +8,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = { "pretty",
+                "json:target/cucumber.json",
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber" },
         features = {"src/test/resources/features"},
         glue = {"net/crmly/step_definitions"},
         dryRun = false,
-        tags = "",     
+        tags = "",
         publish = true
 )
 
