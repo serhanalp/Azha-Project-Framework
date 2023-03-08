@@ -11,19 +11,24 @@ public class US77_DesktopDownloadOptions {
     ActivityStreamPage activityStreamPage = new ActivityStreamPage();
 
 
-    @When("scrolling down lil")
-    public void scrolling_down_lil() {
-        BrowserUtils.hover(activityStreamPage.appStore);
+    @When("user sees DESKTOP CLIENT")
+    public void user_sees_desktop_client() {
+        BrowserUtils.hover(activityStreamPage.macOS);
     }
 
-    @Then("app store option is displayed")
-    public void app_store_option_is_displayed() {
-        Assert.assertEquals(true, activityStreamPage.appStore.isDisplayed());
+    @Then("MAC OS option is displayed")
+    public void mac_os_option_is_displayed() {
+        Assert.assertEquals(true, activityStreamPage.macOS.isDisplayed());
     }
 
-    @Then("google play option is displayed")
-    public void google_play_option_is_displayed() {
-        Assert.assertEquals(true, activityStreamPage.googlePlay.isDisplayed());
+    @Then("WINDOWS option is displayed")
+    public void windows_option_is_displayed() {
+        Assert.assertEquals(true, activityStreamPage.windows.isDisplayed());
+    }
+
+    @Then("Linux option is displayed")
+    public void linux_option_is_displayed() {
+        Assert.assertEquals(true, activityStreamPage.linux.isDisplayed());
     }
 
 }

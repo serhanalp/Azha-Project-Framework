@@ -1,4 +1,4 @@
-@downloadOptions
+@desktopDownloadOptions
   Feature: See desktop options to download
     User story: B28-G9-77 As a user I should be able to see desktop options to download
 
@@ -9,6 +9,7 @@
   #And the user logged in with username as "marketing1@cybertekschool.com" and password as "UserUser"
 
     Scenario: Check for desktop options to download
-      When scrolling down lil
-      Then app store option is displayed
-      And google play option is displayed
+      When user sees DESKTOP CLIENT
+      Then MAC OS option is displayed
+      And WINDOWS option is displayed
+      And Linux option is displayed
