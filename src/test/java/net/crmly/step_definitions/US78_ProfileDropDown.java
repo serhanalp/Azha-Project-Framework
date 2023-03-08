@@ -14,12 +14,6 @@ import java.util.List;
 
 public class US78_ProfileDropDown extends BasePage{
 
-    @Given("user is on the CRM home page")
-    public void user_is_on_the_crm_home_page() {
-        Driver.getDriver().get("https://qa.crmly.net/stream/");
-    }
-
-
 
     @When("user click the profile module on the right side of page")
     public void user_click_the_profile_module_on_the_right_side_of_page() {
