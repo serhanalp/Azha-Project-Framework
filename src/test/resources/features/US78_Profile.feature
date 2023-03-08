@@ -1,3 +1,4 @@
+
 Feature: User profile and options feature
 
   Background: User is already in the login page
@@ -8,10 +9,10 @@ Feature: User profile and options feature
     Given user is on the CRM home page
     When user click the profile module on the right side of page
     Then user should see on the right side as sub-modules below
-      | My Profile             |
-      | Edit Profile Settings  |
-      | Themes                 |
-      | Configure notification |
-      | log out                |
+      | My Profile              |
+      | Edit Profile Settings   |
+      | Themes                  |
+      | Configure notifications |
+      | Log out                 |
 
 
