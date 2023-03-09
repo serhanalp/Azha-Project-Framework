@@ -19,10 +19,10 @@ public class US79_MORE_tabOptions_StepDefinitions extends BasePage {
     public void the_user_sees_more_dropdown_options(List<String> Expected_MORE_Options) {
         List<String> Actual_MORE_dropdownOptions = new ArrayList<>();
         for (WebElement each : MORE_Dropdown_Options) {
-           Actual_MORE_dropdownOptions.add(each.getText());
-        }
-    Assert.assertEquals(Expected_MORE_Options, Actual_MORE_dropdownOptions);
 
+             Actual_MORE_dropdownOptions.add(each.getText().trim());
+        }
+            Assert.assertEquals(Expected_MORE_Options, Actual_MORE_dropdownOptions);
 
     }
 
