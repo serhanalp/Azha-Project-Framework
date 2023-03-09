@@ -22,8 +22,7 @@ public class US79_MORE_tabOptions_StepDefinitions extends BasePage {
 
              Actual_MORE_dropdownOptions.add(each.getText().trim());
         }
-    Assert.assertEquals(Expected_MORE_Options, Actual_MORE_dropdownOptions);
-
+            Assert.assertEquals(Expected_MORE_Options, Actual_MORE_dropdownOptions);
 
     }
 
