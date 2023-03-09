@@ -8,20 +8,8 @@ import org.junit.Assert;
 public class US82_AccessDrivePage_stepDefinitions {
 
     AccessDriverPage accessDriverPage = new AccessDriverPage();
-    @When("The User Enters user name {string}")
-    public void the_user_enters_user_name(String expecteUserName) {
-        accessDriverPage.inputUserName.sendKeys(expecteUserName);
 
 
-    }
-    @Then("The user Enters password {string}")
-    public void the_user_enters_password(String expectedPassword) {
-       accessDriverPage.inputPassword.sendKeys(expectedPassword);
-    }
-    @Then("Users click on the login button")
-    public void users_click_on_the_login_button() {
-        accessDriverPage.logInButton.click();
-    }
     @Then("Users clicks on the drive")
     public void users_clicks_on_the_drive() {
         accessDriverPage.DriverButton.click();
