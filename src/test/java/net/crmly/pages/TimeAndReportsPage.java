@@ -36,5 +36,4 @@ public class TimeAndReportsPage {
     @FindBy(xpath = "//div[contains(@id,'top_menu_id_timeman_menu')]//span[@class='main-buttons-item-text-title']")
     public List<WebElement> subModules;
 
-
 }

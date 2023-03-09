@@ -28,6 +28,5 @@ public class US83_TimeAndReports_StepDefinitions {
             actualModules.add(each.getText());
         }
         Assert.assertEquals(actualModules,expectedSubModules);
-
     }
 }

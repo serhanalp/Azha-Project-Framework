@@ -1,4 +1,3 @@
-
 Feature: Crmly Time and Reports page access
 
   Background: User is already logged in to Crmly
