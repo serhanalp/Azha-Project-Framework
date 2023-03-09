@@ -1,14 +1,12 @@
 
 Feature: Accessing Driver Page
 
-  Background: User is already in the login page
+  Background: User is already logged in to Crmly
     Given the user is on the login page
+    And the user logged in with username as "helpdesk1@cybertekschool.com" and password as "UserUser"
 
   @B28G9-117
   Scenario: Verify the users view all modules in the Drive page.
-    When The User Enters user name "helpdesk7@cybertekschool.com"
-    Then The user Enters password "UserUser"
-    Then Users click on the login button
     Then Users clicks on the drive
     When Users sees "My Drive" first in the driver page
     Then Users sees "all documents" second in the driver page
