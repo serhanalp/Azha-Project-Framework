@@ -69,8 +69,6 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "(//*[contains(@class, 'b24-app-block-content-apps')])[3]")
     public WebElement linux;
 
-
-
     @FindBy(id = "feed-add-post-form-link-text")
     public WebElement moreButton;
 
@@ -91,8 +89,6 @@ public class ActivityStreamPage extends BasePage{
 
     @FindBy(xpath = "//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")
     public WebElement messageBoxIframe;
-
-
 
 
 }

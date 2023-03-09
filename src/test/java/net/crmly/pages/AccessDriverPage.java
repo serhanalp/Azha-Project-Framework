@@ -5,13 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AccessDriverPage {
+public class AccessDriverPage extends BasePage {
 
     public AccessDriverPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-
 
    @FindBy(xpath = "(//span[@class='menu-item-link-text'])[5]")
     public WebElement DriverButton;
