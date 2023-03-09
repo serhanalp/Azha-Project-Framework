@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import net.crmly.pages.AccessDriverPage;
 import org.junit.Assert;
 
-public class US82_Daniel {
+public class US82_AccessDrivePage_stepDefinitions {
 
     AccessDriverPage accessDriverPage = new AccessDriverPage();
     @When("The User Enters user name {string}")
