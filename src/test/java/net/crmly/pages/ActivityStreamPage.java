@@ -82,6 +82,9 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "//button[.='Vote again'][1]")
     public WebElement voteAgainButton;
 
+    @FindBy(xpath = "//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")
+    public WebElement messageBoxIframe;
+
 
 
 }

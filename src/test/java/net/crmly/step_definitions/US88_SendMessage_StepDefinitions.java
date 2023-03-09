@@ -25,7 +25,7 @@ public class US88_SendMessage_StepDefinitions {
     @When("user is able to write a text message on the message body")
     public void user_is_able_to_write_a_text_message_on_the_message_body() {
 
-        Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")));
+        Driver.getDriver().switchTo().frame(activityStreamPage.messageBoxIframe);
 
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(message).perform();

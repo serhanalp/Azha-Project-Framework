@@ -1,4 +1,4 @@
-@regression @messageFunction @serhan
+@regression @messageFunction
 
 Feature: Verify voting for a poll with one answer
   User Story: As a user, I should be able to vote for a poll with one answer.
