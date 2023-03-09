@@ -70,6 +70,11 @@ public class ActivityStreamPage extends BasePage{
     public WebElement linux;
 
 
+    @FindBy(id = "feed-add-post-form-link-text")
+    public WebElement moreButton;
+
+    @FindBy(xpath = "//span[starts-with(@class, \"menu-popup-item-text\")]")
+    public List<WebElement> moreButtonOptions;
 
 }
 
