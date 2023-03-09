@@ -4,6 +4,7 @@ Feature: Accessing Driver Page
   Background: User is already in the login page
     Given the user is on the login page
 
+  @B28G9-117
   Scenario: Verify the users view all modules in the Drive page.
     When The User Enters user name "helpdesk7@cybertekschool.com"
     Then The user Enters password "UserUser"
