@@ -43,7 +43,7 @@ public class ActivityStreamPage extends BasePage{
     public void clickTopMidTabOptions(List<WebElement> elements, String element){
 
         for (WebElement each : elements) {
-            if (each.getText().equals(element.trim())){
+            if (each.getText().equalsIgnoreCase(element.trim())){
                 each.click();
                 break;
             } } }
@@ -68,6 +68,19 @@ public class ActivityStreamPage extends BasePage{
 
     @FindBy(xpath = "(//*[contains(@class, 'b24-app-block-content-apps')])[3]")
     public WebElement linux;
+
+
+    @FindBy(xpath = "//input[@placeholder='Question ']")
+    public WebElement pollQuestionBox;
+
+    @FindBy(xpath = "(//span[@class='bx-vote-block-input-wrap bx-vote-block-radio-wrap']//label//span)[2]")
+    public WebElement pollOption;
+
+    @FindBy(xpath = "//button[.='Vote'][1]")
+    public WebElement voteButton;
+
+    @FindBy(xpath = "//button[.='Vote again'][1]")
+    public WebElement voteAgainButton;
 
 
 

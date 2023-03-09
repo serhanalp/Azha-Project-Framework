@@ -8,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import javax.xml.xpath.XPath;
 import java.util.List;
 
-public class CompanyPage
-{
+public class CompanyPage extends BasePage{
     public CompanyPage ()
     {
         PageFactory.initElements(Driver.getDriver(),this);
