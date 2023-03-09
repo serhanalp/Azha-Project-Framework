@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class TimeAndReportsPage {
+public class TimeAndReportsPage extends BasePage {
 
     public TimeAndReportsPage(){
         PageFactory.initElements(Driver.getDriver(),this);
