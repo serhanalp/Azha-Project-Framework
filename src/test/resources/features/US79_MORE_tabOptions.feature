@@ -7,10 +7,7 @@ Feature: Crmly MORE tab Options visibility and functionality.
   #And the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
   #And the user logged in with username as "marketing1@cybertekschool.com" and password as "UserUser"
 
-
-
-  @B28G9-105 @v
-
+  @B28G9-137 @v
   Scenario: Verify user is able to see all the options under the MORE tab on the homepage.
     When the user clicks on MORE dropdown tab on top right on the homepage
     Then the user sees MORE_Dropdown_Options
