@@ -9,7 +9,7 @@ import net.crmly.utilities.BrowserUtils;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
 
-public class US91_Task_StepDefinition extends BasePage {
+public class US91_Task_StepDefinitions extends BasePage {
 
     @Given("User clicks {string} on the left side bar")
     public void user_clicks_task_on_the_left_side_bar(String option) {
