@@ -6,7 +6,7 @@ import net.crmly.pages.BasePage;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
 
-public class US90_allah_bildigi_gibi_yapsin_StepDefinitions extends BasePage {
+public class US90_AccessingModules_StepDefinitions extends BasePage {
 
     @When("user click the {string}")
     public void user_click_the(String link) {
