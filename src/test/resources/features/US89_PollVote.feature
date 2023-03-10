@@ -9,8 +9,9 @@ Feature: Verify voting for a poll with one answer
   #And the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
   #And the user logged in with username as "marketing1@cybertekschool.com" and password as "UserUser"
 
+  @B28G9-150
   Scenario: Verify users can select one answer and click the “VOTE” button to vote for a poll.
-    And user clicks on "Poll" module on Activity Stream Page
+    When user clicks on "Poll" module on Activity Stream Page
     And user writes a poll title
     And user types a poll question and two answers
     And user sees a poll on the page and chooses an answer
