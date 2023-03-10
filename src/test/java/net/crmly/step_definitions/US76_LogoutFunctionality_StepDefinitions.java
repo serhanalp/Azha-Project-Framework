@@ -2,13 +2,11 @@ package net.crmly.step_definitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.crmly.pages.ActivityStreamPage;
 import net.crmly.pages.LoginPage;
 import net.crmly.utilities.BrowserUtils;
-import net.crmly.utilities.Driver;
 import org.junit.Assert;
 
-public class US76LogoutFunctionality_StepDefinitions {
+public class US76_LogoutFunctionality_StepDefinitions {
 
 LoginPage loginPage = new LoginPage();
 
