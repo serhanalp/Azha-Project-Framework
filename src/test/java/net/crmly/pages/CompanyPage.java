@@ -8,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import javax.xml.xpath.XPath;
 import java.util.List;
 
-public class CompanyPage
-{
+public class CompanyPage extends BasePage{
     public CompanyPage ()
     {
         PageFactory.initElements(Driver.getDriver(),this);
@@ -42,7 +41,8 @@ public class CompanyPage
     @FindBy(xpath = "//span[contains(text(),'Business News (RSS)')]")
     public WebElement businessNews;
 
-    @FindBy(xpath = "//div[@class='main-buttons-item']")
+   // @FindBy(xpath = "//div[@class='main-buttons-item']")
+    @FindBy(xpath = "//div[@id='top_menu_id_about']//a")
     public List<WebElement> companyPageMenue;
 
 
