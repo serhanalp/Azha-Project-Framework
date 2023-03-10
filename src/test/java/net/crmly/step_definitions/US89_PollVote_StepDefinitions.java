@@ -25,7 +25,7 @@ public class US89_PollVote_StepDefinitions {
 
     @And("user writes a poll title")
     public void userWritesAPollTitle() {
-        Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")));
+        Driver.getDriver().switchTo().frame(activityStreamPage.messageBoxIframe);
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(faker.lordOfTheRings().location()).perform();
 

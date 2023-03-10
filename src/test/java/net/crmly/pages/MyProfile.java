@@ -7,7 +7,6 @@ import java.util.List;
 
 public class MyProfile extends BasePage {
 
-
     @FindBy(xpath = "//a[.='My Profile']")
     public WebElement myProfileLink;
 

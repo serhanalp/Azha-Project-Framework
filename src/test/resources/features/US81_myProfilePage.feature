@@ -10,8 +10,8 @@ Feature: My profile page to see 5 options
     Given user click the profile module on the right side of page
     And user click the my profile link
     Then user sees options displayed on below examples
-    |General|
-    |Drive  |
-    |Tasks   |
-    |Calendar|
-    |Conversations|
+      | General       |
+      | Drive         |
+      | Tasks         |
+      | Calendar      |
+      | Conversations |

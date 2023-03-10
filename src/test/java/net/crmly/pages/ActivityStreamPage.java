@@ -69,6 +69,11 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "(//*[contains(@class, 'b24-app-block-content-apps')])[3]")
     public WebElement linux;
 
+    @FindBy(id = "feed-add-post-form-link-text")
+    public WebElement moreButton;
+
+    @FindBy(xpath = "//span[starts-with(@class, \"menu-popup-item-text\")]")
+    public List<WebElement> moreButtonOptions;
 
     @FindBy(xpath = "//input[@placeholder='Question ']")
     public WebElement pollQuestionBox;
@@ -82,6 +87,8 @@ public class ActivityStreamPage extends BasePage{
     @FindBy(xpath = "//button[.='Vote again'][1]")
     public WebElement voteAgainButton;
 
+    @FindBy(xpath = "//div[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']//iframe")
+    public WebElement messageBoxIframe;
 
 
 }
