@@ -3,7 +3,10 @@ package net.crmly.step_definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.crmly.pages.EmployeesPage;
+import net.crmly.utilities.BrowserUtils;
 import org.junit.Assert;
+
+import java.util.List;
 
 public class US84_EmployeesPage_StepDefinitions {
     EmployeesPage employeesPage = new EmployeesPage();
@@ -13,9 +16,12 @@ public class US84_EmployeesPage_StepDefinitions {
         employeesPage.clickOnOption(employeesPage.menuOptions, moduleName);
     }
 
-    @Then("the user sees all the {string} list in this page")
-    public void the_user_sees_all_the_list_in_this_page(String expectedTitle) {
-        Assert.assertEquals(employeesPage.employeesTitle.getText(), expectedTitle);
-    }
 
+    @Then("the user sees modules below on the page")
+    public void the_User_Sees_Modules_Below_On_The_Page(List<String> expectedModuleNames) {
+
+        List<String> actualModuleNames = BrowserUtils.getElementsText(employeesPage.employeesPageModules);
+
+        Assert.assertTrue(actualModuleNames.containsAll(expectedModuleNames));
+    }
 }

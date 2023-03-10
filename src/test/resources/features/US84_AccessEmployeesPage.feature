@@ -11,4 +11,12 @@ Feature: Verify user can access Employees page.
 
   Scenario: Verify users can click on Employees page on the left column and reach Employees page
     When the user clicks on "Employees" module on the left hand side
-    Then the user sees all the "Employees" list in this page
+    Then the user sees modules below on the page
+      | Company Structure   |
+      | Find Employee       |
+      | Telephone Directory |
+      | Staff Changes       |
+      | Efficiency Report   |
+      | Honored Employees   |
+      | Birthdays           |
+      | New page            |
