@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MobileApplication {
+public class MobileApplicationPage extends BasePage {
 
-    public MobileApplication(){
+    public MobileApplicationPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

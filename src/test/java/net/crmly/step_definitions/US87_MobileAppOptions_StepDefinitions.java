@@ -2,19 +2,17 @@ package net.crmly.step_definitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.crmly.pages.MobileApplication;
-import net.crmly.utilities.BrowserUtils;
+import net.crmly.pages.MobileApplicationPage;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class US87_MobileAppOptions_StepDefinitions {
 
-MobileApplication mobileApplication = new MobileApplication();
+MobileApplicationPage mobileApplication = new MobileApplicationPage();
 Actions actions = new Actions(Driver.getDriver());
     @When("user scrolls down to Mobile Applications")
     public void user_scrolls_down_to_mobile_applications() {

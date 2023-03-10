@@ -20,7 +20,6 @@ public class LoginPage extends BasePage {
     @FindBy(className = "login-btn")
     public WebElement submitButton;
 
-
     public void login(String userName, String password) {
         userNameBox.sendKeys(userName);
         passwordBox.sendKeys(password);
