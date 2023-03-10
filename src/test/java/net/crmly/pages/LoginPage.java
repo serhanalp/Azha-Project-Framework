@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public LoginPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(name = "USER_LOGIN")
     public WebElement userNameBox;
 
-    @FindBy(name= "USER_PASSWORD")
+    @FindBy(name = "USER_PASSWORD")
     public WebElement passwordBox;
 
     @FindBy(className = "login-btn")
@@ -29,5 +29,8 @@ public class LoginPage extends BasePage {
 
     @FindBy(className = "errortext")
     public WebElement errorMessage;
+
+    @FindBy(id = "USER_REMEMBER")
+    public WebElement rememberMeCheckBox;
 
 }
