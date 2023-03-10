@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber" },
         features = {"src/test/resources/features"},
         glue = {"net/crmly/step_definitions"},
-        dryRun = true,
+        dryRun = false,
         tags = "",
         publish = true
 )
