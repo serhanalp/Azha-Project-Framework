@@ -1,4 +1,4 @@
-@regression @employees
+@regression @B28G9-128
 
 Feature: Verify user can access Employees page.
   User Story: As a user, I want to access the Employees page.
